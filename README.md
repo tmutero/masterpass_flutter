@@ -5,7 +5,7 @@
 </a>
 </p>
 <p align="center">
-
+<img src="https://raw.githubusercontent.com/born-ideas/masterpass/master/assets/project_logo.png" height="100" alt="Masterpass Example" />
 </p>
 
 <!-- PROJECT SHIELDS -->
