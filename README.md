@@ -18,9 +18,7 @@
 <a href="https://github.com/born-ideas/masterpass/blob/master/LICENSE"><img src="https://img.shields.io/github/license/born-ideas/masterpass" alt="license"></a>
 </p>
 
----
-<!-- DEPRECATED WARNING -->
-> :warning: **Deprecated**: This plugin is no longer being maintained or supported. Sorry for any inconvenience.
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
