@@ -21,7 +21,8 @@ typedef NS_ENUM(NSInteger, MPError) {
     MPErrorOTPError,
     MPErrorInvalidCodeParameter,
     MPErrorInvalidApiKeyParameter,
-    MPErrorSecureCodeNotSupported
+    MPErrorSecureCodeNotSupported,
+    MPErrorCodeNotVariableAmount
 };
 
 
@@ -39,6 +40,8 @@ typedef NS_ENUM(NSInteger, MPError) {
 -(void)masterpassInvalidCode;
 @required
 -(void)masterpassUserRegistered;
+@required
+-(void)masterpassUserCompletedWallet;
 
 @end
 
@@ -48,10 +51,26 @@ typedef NS_ENUM(NSInteger, MPError) {
 + (void)load;
 -(void)showLoadingDialogFromController:(UIViewController *)presentingController;
 -(void)hideLoadingDialog;
--(void)checkoutWithCode:(NSString *)code apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate;
--(NSString *)getLibNixApiVersion;
--(void)preRegister:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate ;
 
+-(void)checkoutWithCode:(NSString *)code amount:(NSString *)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate;
+-(void)checkoutWithCode:(NSString *)code amount:(NSString *)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN;
+-(void)checkoutWithCode:(NSString *)code amount:(NSString *)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate customerId:(NSString*)customerId;
+-(void)checkoutWithCode:(NSString *)code amount:(NSString *)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN customerId:(NSString*)customerId;
+
+-(void)preRegister:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate;
+-(void)preRegister:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN;
+-(void)preRegister:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate customerId:(NSString*)customerId;
+-(void)preRegister:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN customerId:(NSString*)customerId;
+
+-(void)WalletManagement:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate;
+-(void)WalletManagement:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN;
+-(void)WalletManagement:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate customerId:(NSString*)customerId;
+-(void)WalletManagement:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN customerId:(NSString*)customerId;
+
+-(void)deregisterUser;
+
+-(NSString *)getLibNixApiVersion;
+//TODO remove, for dubugging only
 -(void)showScreen:(NSString *)storybaordId fromController:(UIViewController *)presentingController;
 
 -(void)reset;
