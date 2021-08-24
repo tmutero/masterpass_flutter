@@ -22,19 +22,20 @@ public class SwiftMasterpassPlugin: NSObject, FlutterPlugin {
             let code = arguments["code"] as! String
             let system = arguments["system"] as! String
             let key = arguments["key"] as! String
-            checkout(code: code, system: system, key: key, flutterResult: result)
+            let amount = arguments["amount"] as! String
+            checkout(code: code, amount:amount, system: system, key: key, flutterResult: result)
         } else {
             result("Flutter method not implemented on iOS")
         }
     }
     
     /// Perform the masterpass checkout with the given transaction code, system , and api key.
-    public func checkout(code: String, system: String, key: String, flutterResult: @escaping FlutterResult) {
+    public func checkout(code: String, amount: String, system: String, key: String, flutterResult: @escaping FlutterResult) {
         let masterpass = MPMasterPass();
         let masterpassDelegate = MasterpassDelegate(flutterResult: flutterResult);
         var masterpassSystem: MPSystem;
         system == "Live" ? (masterpassSystem = MPSystem.live) : (masterpassSystem = MPSystem.test);
-        masterpass.checkout(withCode: code, apiKey: key, system: masterpassSystem, controller: UIApplication.shared.delegate?.window??.rootViewController, delegate: masterpassDelegate)
+        masterpass.checkout(withCode: code, amount: amount, apiKey: key, system: masterpassSystem, controller: UIApplication.shared.delegate?.window??.rootViewController, delegate: masterpassDelegate)
     }
 }
 
