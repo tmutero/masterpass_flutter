@@ -1,8 +1,6 @@
 <!-- PROJECT LOGO -->
 <p align="right">
-<a href="https://pub.dev">
-<img src="https://raw.githubusercontent.com/born-ideas/masterpass/master/assets/project_badge.png" height="100" alt="Flutter">
-</a>
+
 </p>
 <p align="center">
 <img src="https://raw.githubusercontent.com/born-ideas/masterpass/master/assets/project_logo.png" height="100" alt="Masterpass Example" />
@@ -10,17 +8,15 @@
 
 <!-- PROJECT SHIELDS -->
 <p align="center">
-<a href="https://pub.dev/packages/masterpass"><img src="https://img.shields.io/pub/v/masterpass" alt="pub"></a>
+
 <a href="https://github.com/born-ideas/masterpass/issues"><img src="https://img.shields.io/github/issues/born-ideas/masterpass" alt="issues"></a>
 <a href="https://github.com/born-ideas/masterpass/network"><img src="https://img.shields.io/github/forks/born-ideas/masterpass" alt="forks"></a>
 <a href="https://github.com/born-ideas/masterpass/stargazers"><img src="https://img.shields.io/github/stars/born-ideas/masterpass" alt="stars"></a>
-<a href="https://dart.dev/guides/language/effective-dart/style"><img src="https://img.shields.io/badge/style-effective_dart-40c4ff.svg" alt="style"></a>
+
 <a href="https://github.com/born-ideas/masterpass/blob/master/LICENSE"><img src="https://img.shields.io/github/license/born-ideas/masterpass" alt="license"></a>
 </p>
 
----
-<!-- DEPRECATED WARNING -->
-> :warning: **Deprecated**: This plugin is no longer being maintained or supported. Sorry for any inconvenience.
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -270,9 +266,8 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 <!-- CONTACT -->
 ## Contact
 
-BornIdeas - [born.dev](https://www.born.dev) - [info@born.dev](mailto:support@born.dev)
+Author: BornIdeas - [born.dev](https://www.born.dev) - [info@born.dev](mailto:support@born.dev)
 
-Project Link: [https://github.com/born-ideas/masterpass](https://github.com/born-ideas/masterpass)
 
 
 
