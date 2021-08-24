@@ -10,6 +10,7 @@ const String TXN_CODE_FOR_FAILED = "txnCodeForFailed";
 const String TXN_CODE_FOR_INVALID = "txnCodeForInvalid";
 const String VALID_TEST_KEY = "validTestKey";
 const String VALID_LIVE_KEY = "validLiveKey";
+const String amount = "10.00";
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,27 +26,27 @@ void main() {
   });
 
   test("Successful response yields PaymentSucceeded", () async {
-    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_SUCCESS);
+    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_SUCCESS, amount);
     expectLater(result is PaymentSucceeded, true);
   });
 
   test("Failed response yields PaymentFailed", () async {
-    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_FAILED);
+    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_FAILED, amount);
     expectLater(result is PaymentFailed, true);
   });
 
   test("Cancelled response yields UserCancelled", () async {
-    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_CANCELLED);
+    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_CANCELLED, amount);
     expectLater(result is UserCancelled, true);
   });
 
   test("Error response yields MasterpassError", () async {
-    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_ERROR);
+    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_ERROR,amount);
     expectLater(result is MasterpassError, true);
   });
 
   test("Invalid Code response yields InvalidTxnCode", () async {
-    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_INVALID);
+    CheckoutResult result = await masterpass.checkout(TXN_CODE_FOR_INVALID, amount);
     expectLater(result is InvalidTxnCode, true);
   });
 }

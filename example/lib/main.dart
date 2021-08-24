@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
           // The masterpass system you want to use (TEST or LIVE)
           String system = MasterpassSystem.TEST;
           Masterpass masterpass = Masterpass(apiKey, system);
-          CheckoutResult paymentResult = await masterpass.checkout(txnCode);
+          CheckoutResult paymentResult = await masterpass.checkout(txnCode, _amountController.text);
 
           if (paymentResult is PaymentSucceeded) {
             bool paymentVerified =
