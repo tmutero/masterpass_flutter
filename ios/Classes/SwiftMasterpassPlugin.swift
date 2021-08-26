@@ -44,6 +44,10 @@ public class SwiftMasterpassPlugin: NSObject, FlutterPlugin {
 class MasterpassDelegate: UIViewController, MPMasterPassDelegate {
     /// the FlutterResult instance to use for returning results back to flutter.
     var flutterResult: FlutterResult
+
+    func masterpassUserCompletedWallet() {
+        <#code#>
+      }
     
     /// Constructor used to initialize flutterResult.
     init(flutterResult: @escaping FlutterResult) {
