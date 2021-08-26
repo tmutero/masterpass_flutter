@@ -46,7 +46,8 @@ class MasterpassDelegate: UIViewController, MPMasterPassDelegate {
     var flutterResult: FlutterResult
 
     func masterpassUserCompletedWallet() {
-        <#code#>
+        let checkoutResult = CheckoutResult(code: "PAYMENT_SUCCEEDED", reference: transactionReference)
+        flutterResult(checkoutResult.dictionaryRepresentation)
       }
     
     /// Constructor used to initialize flutterResult.
