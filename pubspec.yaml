@@ -1,11 +1,11 @@
 name: masterpass
 description: A Flutter plugin for working with the masterpass in-app API.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/tmutero/masterpass_flutter
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
-  flutter: ">=1.12.0"
+  flutter: ">=1.12.0 <2.0.0"
 
 dependencies:
   flutter:

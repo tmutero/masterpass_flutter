@@ -19,7 +19,7 @@ void main() {
     return masterpassChannelResponse(methodCall);
   });
 
-   Masterpass masterpass;
+    Masterpass masterpass;
 
   setUp(() {
     masterpass = Masterpass(VALID_TEST_KEY, MasterpassSystem.TEST);
