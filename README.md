@@ -266,7 +266,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 <!-- CONTACT -->
 ## Contact
 
-Author: BornIdeas - [born.dev](https://www.born.dev) - [info@born.dev](mailto:support@born.dev)
+Credits: BornIdeas - [born.dev](https://www.born.dev) - [info@born.dev](mailto:support@born.dev)
 
 
 
